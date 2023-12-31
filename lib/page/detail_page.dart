@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class DetailPage extends StatelessWidget {
   final String? id;
@@ -8,9 +7,10 @@ class DetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    debugPrint(GoRouter.of(context).location);
-    debugPrint(
-        GoRouter.of(context).routerDelegate.currentConfiguration.last.subloc);
+    // 获取 query parameters
+    debugPrint('DetailPage id $id');
+    // debugPrint(
+    //     GoRouter.of(context).routerDelegate.currentConfiguration.last.subloc);
     return Scaffold(
       appBar: AppBar(
         title: const Text('Detail Page'),

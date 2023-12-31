@@ -51,6 +51,13 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               const SizedBox(height: 20),
               ElevatedButton(
+                child: const Text('page list'),
+                onPressed: () {
+                  context.goNamed('list', pathParameters: {'id': 'list'});
+                },
+              ),
+              const SizedBox(height: 20),
+              ElevatedButton(
                 child: const Text('logout'),
                 onPressed: () {
                   Constant.login = false;
